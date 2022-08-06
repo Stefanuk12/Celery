@@ -68,11 +68,11 @@ local SubpacketNames = {
 
 -- // Functions
 local function ResolvePacket(PacketId, SubpacketId)
-    if (not SubpacketId) then
-        if (typeof(PacketId) == "number") then
-            PacketId = "0x" .. string.format("%X", PacketId)
-        end
+    if (typeof(PacketId) == "number") then
+        PacketId = "0x" .. string.format("%X", PacketId)
+    end
 
+    if (not SubpacketId) then
         return PacketNames[PacketId]
     end
 
