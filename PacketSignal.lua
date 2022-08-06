@@ -25,7 +25,7 @@ PacketSignal:Connect("OnPacket", function(Packet)
         return
     end
 
-    -- //
+    -- // Decode packet and fire event
     local Event = rnet.readeventpacket(Packet)
     PacketSignal:Fire("OnRemoteEvent", Event)
 end)
